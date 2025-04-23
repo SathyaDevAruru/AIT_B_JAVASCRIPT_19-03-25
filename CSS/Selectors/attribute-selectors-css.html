@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Conditional-Selectors-CSS</title>
+	<style>
+		
+		/* 1. Has attribute : [attr-name] */
+		[type]{
+			width: 98%;
+		}
+		/* 2. attribute value equals to : [attr-name = 'attr-value'] */
+		[type='submit']{
+			width: 98.9%;
+		}
+
+		/* 3. attribute value starts with : [attr-name ^= 'attr-value'] */
+		[placeholder^='Enter']{
+			border-radius: 20px;
+			margin: 3px;
+		}
+
+		/* 4. attribute value ends with : [attr-name $= 'attr-value'] */
+		[value$='LogIn']{
+			border-radius: 20px;
+			background-color: orangered;
+			border: none;
+			padding: 5px;
+		}
+		/* 4. attribute value contains : [attr-name *= 'attr-value'] */
+		[placeholder*='e']{
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+
+	<form>
+		<input type="text" name="username" placeholder="Enter your name">
+		<input type="password" name="pwsd" placeholder="Enter your password">
+		<input type="submit" value="LogIn">
+	</form>
+</body>
+</html>

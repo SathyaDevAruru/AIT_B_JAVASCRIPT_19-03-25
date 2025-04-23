@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Combinators-CSS</title>
+	<style>
+		/* Parent and Children combination */
+		/*ul,li{
+			border: 1px solid red;
+			padding: 10px;
+			margin: 10px;
+		}*/
+		
+
+
+		/* Direct child selector */
+		ul>li{
+			border: 1px solid red;
+			padding: 10px;
+			margin: 10px;
+		}
+
+		/* Indirect child selector */
+		ul li{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JS
+			<ol>
+				<li>Angular</li>
+				<li>React</li>
+				<li>Vue</li>
+			</ol>
+		</li>
+		<li>GIT</li>
+		<li>Java</li>
+	</ul>
+</body>
+</html>

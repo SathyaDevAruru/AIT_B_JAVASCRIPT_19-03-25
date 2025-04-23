@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pseudo-Selectors-CSS</title>
+	<style>
+		/*
+		- To select an element as per the element position from the body tag.
+		- Two types of Pseudo selectors
+
+			1. Pseudo class ( : )
+			2. Pseudo element ( :: )
+	
+			Syntax of Pseudo selector:
+	
+
+			// 1. Pseudo class ( : )
+
+			Anyselector:element-state{
+				p.n : p.v;
+			}
+
+
+
+			// 2. Pseudo element ( :: )
+			
+			Anyselector::element-state{
+				p.n : p.v;
+			}
+		*/
+
+		/* 1. Pseudo class ( : ) */
+
+		section{
+			border: 1px solid red;
+			padding: 10px;
+			margin: 10px;
+		}
+		/*section:hover{
+			background-color: orangered;
+		}
+		section:nth-child(1){
+			background-color: blue;
+		}
+		section:nth-child(2){
+			background-color: violet;
+		}
+		section:nth-child(3){
+			background-color: yellow;
+		}
+		section:last-child{
+			background-color: green;
+		}*/
+
+
+		/*2. Pseudo element selector: */
+
+		section::before{
+			content: 'My name is ';
+		}
+		section::after{
+			content: '. I am learning CSS now. ';
+		}
+		section::first-letter{
+			font-style: italic;
+			font-size: 50px;
+		}
+		p::first-line{
+			font-style: oblique;
+			font-size: 30px;
+		}
+		p::selection{
+			background-color: black;
+			color: yellow;
+		}
+		input::placeholder{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<section> Vikram.</section>
+	<section>Sekhar</section>
+	<section>Teja</section>
+	<section>Priya</section>
+	<input type="text" name="" placeholder="Enter your name">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</body>
+</html>

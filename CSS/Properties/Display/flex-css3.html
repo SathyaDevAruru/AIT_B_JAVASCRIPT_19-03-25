@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Three-columns-layout-Flex-CSS3</title>
+	<style>
+		.container{
+/*			height: 400px;*/
+			border: 1px solid red;
+			padding: 10px;
+			margin: 3px;
+			display: flex;
+			/*flex-direction: row;
+			flex-wrap: wrap;*/
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			/*justify-content: flex-start;*/
+/*			align-content: space-evenly;*/
+
+			
+		}
+
+		.item{
+			border: 1px solid;
+			padding: 10px;
+			margin: 5px;	
+		}
+
+		.item:nth-child(1){
+			background-color: red;
+			/*flex-grow: 30;
+			flex-basis: 0%;
+			flex-shrink: 6;*/
+			order: 1;
+		}
+		.item:nth-child(2){
+			background-color: green;
+/*			flex: 10;*/
+			order: -10;
+		}
+		.item:nth-child(3){
+			background-color: blue;
+/*			flex: 1;*/
+			order: -1;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Container / Row / parent -->
+	<section class="container">
+		<!-- Itmes / Columns / child -->
+		<div class="item">Item-1</div>
+		<div class="item">Item-2</div>
+		<div class="item">Item-3</div>
+		<!-- <div class="item">Item-4</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div>
+		<div class="item">Item-5</div> -->
+	</section>
+
+
+
+</body>
+</html>

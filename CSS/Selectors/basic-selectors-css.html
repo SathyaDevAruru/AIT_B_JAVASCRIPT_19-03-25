@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Basic-Selectors-CSS</title>
+	<style>
+		/* 1. Global Selector (*) */
+		*{
+			background-color: orangered;
+		}
+		/* 2. Tag / Element Selectors  */
+		/*h1{
+			color: white;
+		}*/
+
+		/* 3. Class selector ( . ) */
+		.heading-2{
+			border: 1px solid white;
+		}
+
+		/* 4. id selector ( # ) */
+		#heading-3{
+			text-align: center;
+		}
+
+		/* 5. Grouping Selector */
+		h1,.heading-2,#heading-3,h4,h5,h6{color: white;}
+		/*h2{color: white;}
+		h3{color: white;}
+		h4{color: white;}
+		h5{color: white;}
+		h6{color: white;}*/
+	</style>
+</head>
+<body>
+
+	<h1>We are learning CSS Selectors now.</h1>
+	<h2 class="heading-2">We are learning CSS Selectors now.</h2>
+	<h3 id="heading-3">We are learning CSS Selectors now.</h3>
+	<h4>We are learning CSS Selectors now.</h4>
+	<h5>We are learning CSS Selectors now.</h5>
+	<h6>We are learning CSS Selectors now.</h6>
+</body>
+</html>

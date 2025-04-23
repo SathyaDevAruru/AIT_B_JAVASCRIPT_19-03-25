@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varable-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // Variable: It is a container. Which can store a value.
+
+        /*
+        variabel declaration Syntax:
+
+            anykeyword variablename = value;
+
+            Keywords: 
+
+                 - var
+                 - let
+                 - const
+
+            While declaring a variable we must check this statements
+
+                - Variable declaration.
+                - Assignmet / Initialization the value
+                - Re-declaration
+                - Re-assign
+        
+
+        Rules while giving variable names: 
+
+            1. Variable name can start with letter.
+            2. Variable name should not be started with number. Ex: ( let 1 = '2' )
+            3. Variable name should not be contained any special characters ( apart from _,$).Ex( var #name = 'Sathya'). 
+            4. Variable name should not be given white spaces. Ex: (let course fee = 3000).
+            5. Variable name must be written camel case. Ex: (let studentName = 'Bikram')
+        */
+
+        // Variable declaration with " var " keyword: 4 statements
+
+        // 1. Variable declaration.
+        var name ;
+        // 2. Assignmet / Initialization the value
+        name = 'Mahesh';
+        // To print the value
+        document.write(name)
+        // 3. Re-declaration
+        var name;
+        // 4. Re-assign
+        name = 'Vikram';
+        // To print the value
+        document.write(name);
+
+
+
+        // Variable declaration with " let " keyword: 3 statements
+
+        // 1. Variable declaration.
+        let course;
+        // 2. Assignmet / Initialization the value
+        course = 'JavaScript';
+        // To print the value
+        console.log(course);
+        // 3. Re-declaration can not be done in let keyword
+        // 4. Re-assign
+        course = 'Full stack development';
+        // to get the value 
+        console.log(course);
+        
+        
+
+         // Variable declaration with " const " keyword: 2 statements
+         // 1. Variable declaration and Assignmet / Initialization the value.
+         const courseFee = 30000 ;
+        // To print the value
+        console.log(courseFee);
+
+
+
+
+        /* 
+        Scopes: 3 types
+
+        1. Global scope.
+        2. Local / Functional scope.
+        3. Block scope.
+        
+        */
+
+
+
+        // Example for global scope:
+        var a = 10;
+        let b = 20;
+        const c = 30;
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        
+
+         // Example for functional / Local scope:
+         function add(){
+            var d = 40;
+            let e = 50;
+            const f = 60;
+             console.log(d,e,f);
+           
+         }
+         add()
+
+
+         // Example for block scope:
+         {
+            var m = 70;
+            let n = 80;
+            const l = 90;
+            console.log(m,n,l);
+            
+         }
+         
+
+    </script>
+</body>
+</html>

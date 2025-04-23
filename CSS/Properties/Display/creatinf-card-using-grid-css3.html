@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Creating-Page-Grid</title>
+	<style>
+		.header h2{
+			background-color: #cf0068;
+			margin: 0px;
+			text-transform: uppercase;
+			text-align: center;
+			color: white;
+			font-size: 73px;
+		}
+		section{
+			border: 1px solid gray;
+			display: flex;
+			
+		}
+		section figure:nth-child(1){
+			flex: 2;
+    		padding:35px;
+    		box-shadow: 2px 2px 5px gray;
+		}
+		section figure:nth-child(2){
+			flex: 2;
+		}
+			section figure:nth-child(3){
+			flex: 2;
+		}
+
+		section figure img{
+			width: 300px;
+			border-radius: 5px;
+		}
+		section figure figcaption{
+			font-size: 25px;
+		}
+		section figure p{
+			text-align: justify;
+		}
+		section figure button{
+			background-color: #373737f7;
+			color: white;
+			border: none;
+			padding: 5px;
+
+		}
+		.footer h2{
+			    background-color: black;
+			    margin: 0px;
+			    text-transform: uppercase;
+			    text-align: center;
+			    color: white;
+			    font-size: 73px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Header portion -->
+	<header class="header">
+		<h2>creating a card protion</h2>
+	</header>
+	<!-- Card portion -->
+	<section>
+		<figure>
+			<img src="https://media.istockphoto.com/id/1448317086/photo/woman-working-on-a-computer-in-an-office.jpg?s=612x612&w=0&k=20&c=pSmyPXwi0OkdrjNRpR9UnJLPmxqwfkWrrrrIDb2H_L8=" alt="UI-Dev">
+			<figcaption>UI Developer</figcaption>
+			<p>A front-end developer is a type of software developer who creates the user-facing side of websites and applications. They are well-versed in web development languages such as HTML, CSS, and JavaScript that are designed for coding dynamic, interactive user experiences.</p>
+			<button>Read More</button>
+		</figure>
+		<figure>
+			<img src="https://media.istockphoto.com/id/616902766/photo/dedicated-to-software-development.webp?a=1&b=1&s=612x612&w=0&k=20&c=3IVsiWuCAD-9hoc9n0Sk8KcUNzO3U0DOHmbtGfHRGBM=" alt="UI-Dev">
+			<figcaption>UX Designer</figcaption>
+			<p>A front-end developer is a type of software developer who creates the user-facing side of websites and applications. They are well-versed in web development languages such as HTML, CSS, and JavaScript that are designed for coding dynamic, interactive user experiences.</p>
+			<button>Read More</button>
+		</figure>
+		<figure>
+			<img src="https://media.istockphoto.com/id/1552875565/photo/programming-coding-and-man-with-focus-hologram-and-trading-with-cyber-security-futuristic-and.webp?a=1&b=1&s=612x612&w=0&k=20&c=kDl6LkUcVrUP3MJwv17F2jsAndTroskw-ulbWDBI17E=" alt="UI-Dev">
+			<figcaption>Java Developer</figcaption>
+			<p>A front-end developer is a type of software developer who creates the user-facing side of websites and applications. They are well-versed in web development languages such as HTML, CSS, and JavaScript that are designed for coding dynamic, interactive user experiences.</p>
+			<button>Read More</button>
+		</figure>
+	</section>
+	<!-- Footer portion -->
+	<footer class="footer">
+		<h2>Using Grid Property</h2>
+	</footer>
+
+</body>
+</html>

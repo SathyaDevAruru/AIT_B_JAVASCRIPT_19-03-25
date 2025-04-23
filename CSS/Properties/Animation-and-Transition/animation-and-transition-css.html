@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Animatation-And-Transition-CSS</title>
+	<style>
+		section{
+			border: 5px double red;
+			padding: 20px;
+			width: 150px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			position: relative;
+			top: 200px;
+			left: 500px;
+			background-color: black;
+			color: white;
+
+
+			transition-property: background-color,transform,color,border;
+			transition-delay: 3s;
+			transition-duration: 5s;
+			transition-timing-function: linear;
+
+
+			/*animation-name: toMove;
+			animation-delay: 1s;
+			animation-duration: 30s;
+			animation-iteration-count: 6;
+			animation-timing-function: linear;
+			position: relative;*/
+
+		}
+		section:hover{
+			background-color: orangered;
+			transform: rotate(360deg);
+			color: white;
+			border: 5px double black;
+		}
+		/* Implementation of Animation */
+		/*@keyframes toMove{
+			from{
+				transform: rotate(0deg);
+				background-color: green;
+				left: 0px;
+				top: 0px;
+			}
+			to{
+				transform: rotate(360deg);
+				background-color: red;
+				left: 400px;
+				top: 0px;
+				border-radius: 50%;
+			}
+		}*/
+	</style>
+</head>
+<body>
+
+	<section>
+		Animate
+	</section>
+
+	<!-- 
+
+	Transition: If you want to change the other property values how does it change from old to new.
+
+
+
+	 -->
+</body>
+</html>
