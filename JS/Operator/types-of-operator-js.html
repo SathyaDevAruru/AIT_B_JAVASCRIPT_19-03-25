@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // 1. Arithmetic operator:
+        let sumOne = 10;
+        let sumTwo = 4;
+        let res = sumOne+sumTwo;
+        console.log(res);
+        
+        console.log(sumOne+sumTwo);
+        console.log(sumOne-sumTwo);
+        console.log(sumOne*sumTwo);
+        console.log(sumOne/sumTwo); // 2.5
+        console.log(sumOne%sumTwo); // 2
+
+
+        // increment operator and decrement operator:
+
+        let a = 10;
+        // prefix increment 
+        console.log(++a);
+
+        // postfix increment
+        console.log(a++);;
+
+        // prefix decrement 
+        console.log(--a);
+
+        // postfix decrement 
+        console.log(a--);
+
+
+
+
+    // 2. Assingment operator 
+        let num;
+
+            x = 10;
+            console.log(x); // 10;
+
+            x = 20;
+            // x = x + 30; i = i+1 ----> i+=1
+            x += 30
+            console.log(x);
+
+            x = 50;
+            x-=20;
+            console.log(x); // 30
+
+            let fName = 'Bikram';
+            let lName = 'nath';
+
+            console.log(fName+lName);
+
+            fName += lName
+            console.log(fName);
+
+    //  3. Comparison Operation
+        let numOne = 10;
+        let numTwo = 20;
+        let numThree = '10';
+
+        // == vs ===
+
+        console.log(numOne == numThree); // true
+        console.log(numOne === numThree); // false
+        console.log(numOne<numTwo); // true
+        console.log(numOne > numTwo); // fasle 
+        console.log(numOne >= numTwo);
+        console.log(numOne !== numThree);
+        
+        
+        // Logical Operator
+
+        // AND : 
+        console.log(`****** AND Operator *******`);
+        console.log(true && true ); // true 
+        console.log(true && false ); // false
+        console.log(false && true ); // false
+        console.log(false && false ); // false
+        
+        
+
+        // OR
+        console.log(`****** OR Operator *******`);
+        console.log(true ||  true ); // true 
+        console.log(true ||  false ); // true
+        console.log(false ||  true ); // true
+        console.log(false ||  false ); // flase 
+
+        // NOT
+        console.log(`****** NOT Operator *******`);
+        console.log(!false); 
+        
+        
+            
+            
+            
+            
+            
+
+        
+        
+        
+        
+    </script>
+</body>
+</html>
