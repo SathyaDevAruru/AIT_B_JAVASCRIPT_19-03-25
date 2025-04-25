@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type-conversion-and Coercion-JS</title>
+</head>
+<body>
+    
+
+    <script>
+        // Type conversion- Explicitly
+        /**************** To convert numeric string into a number *************/
+        /*
+            1. Number().
+            2. +variable 
+            3. parseInt()
+            4. parseFloat()
+        
+        */ 
+        let num = '20dfrt25.9087';
+        console.log(num);
+        console.log(typeof num);
+
+        // 1. Number method:
+         let res = Number(num);
+         console.log(res);
+
+        //  2. moden way - 2020 (+)
+        console.log(+num);
+
+        // 3. parseInt
+        console.log(parseInt(num));
+        
+        // 4. parseFloat 
+        console.log(parseFloat(num));
+        
+        
+         
+         /************* To convert number into string ***************/
+
+         console.log(`*****we are converting number into string*****`);
+         
+         let str = 2025;
+         console.log(str);
+         console.log(typeof str);
+
+        // 1. Approach
+         let strRes = new String(str);
+         console.log(strRes);
+         console.log(typeof strRes);
+
+        //  Approach - 2
+        console.log(str.toString());
+        
+         
+         
+        /************* To convert boolaen type ***************/
+        /*
+            - Falsy values: 
+
+                - 0
+                - null
+                - undefined
+                - ''
+                - NaN
+                - -0
+        */ 
+
+        console.log(`*****we are converting boelean type *****`);
+
+        console.log(Boolean(0)); // false
+        console.log(Boolean(null)); // false
+        console.log(Boolean(undefined)); // false
+        console.log(Boolean('')); // false
+        console.log(Boolean(NaN)); // false
+        console.log(Boolean(-0)); // false
+        console.log(Boolean(-1)); // true
+        
+
+
+        //  Type coercion :- Implicit
+
+        let add = '30' + 20;
+        console.log(add); // 3020 
+
+        console.log(20+'Hello'+20); // 20hello20
+        console.log(20+undefined+20); // 
+        console.log(20+'undefined'+20); // 
+        console.log(20+''+20); // 40
+        console.log(20+NaN+20); //
+        console.log(20+'398'); 
+        
+        
+        let subs ='20'- 10;
+        console.log(subs);
+        console.log(20-'sub'+20);
+        
+        
+        
+        
+         
+        
+        
+    </script>
+</body>
+</html>
