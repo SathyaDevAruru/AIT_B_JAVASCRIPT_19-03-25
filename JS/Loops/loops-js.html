@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops-JS</title>
+</head>
+<body>
+    
+
+
+    <script>
+        /*
+        
+        Loops :- To execute the same block of code again and again. as long as a certian condition is met. // 
+
+        Types of loops:
+        
+            1. Entry controlled loop
+                - for-loop
+                - while loop
+            2. Exit controlled loop 
+                - do-while loop
+            3. Advanced loops
+                - for-in loop
+                - for-of loop ( ES6 )
+        */ 
+
+
+
+
+        /********************* 1. For loop ***********************************/
+        /* 
+        
+        Synatx of For-loop 
+        
+        for( intialization ; condtion ; increment / decrement operators){
+            // Code to be exexcuted.
+        }
+        
+        */
+
+        // Example for for - loop
+
+       /* 
+       for(let i = 1; i<=5; i++){
+           
+            if(i == 4){
+                break
+            }
+            console.log(`${i} - Hello To all `);
+        }*/
+
+
+         /********************* 2. While loop :- Which expects back end  ***********************************/
+
+        /*
+        Syntax : 
+
+        variable declaration
+        while(Condition){
+            // code to be executed.
+            // increment / derement operator.
+        }
+        */  
+       // Example for while loop:
+
+       let i = 10;
+       while(i<=5){
+        console.log(`${i} - Hello While loop`);
+        i++;
+        
+       } 
+
+
+
+         /********************* 2. Do - while loop   ***********************************/
+
+    /*
+     Syntax:
+
+     do{
+       // execute the code 
+       // increment / decrement operator
+     }
+       while(condition)
+    
+    */
+   
+    // Example for do-while loop
+    console.log(`*********** Example for do-while loop **************`);
+
+    let j = 10;
+    do{
+        console.log(`${j} - Do-while loop `);
+        j++; 
+    }
+    while( j <= 5)
+    
+
+
+
+    // Older way of iterating of the code - DRY 
+
+    console.log('1-Hello');
+    console.log('2-Hello');
+    console.log('3-Hello');
+    console.log('4-Hello');
+    console.log('5-Hello');
+    console.log('6-Hello');
+    
+
+    // Using for loop to iterate the code
+
+    for(let m = 1; m<=6; m++){
+        console.log(`${m} - Hello`);
+    }
+
+
+    // Iterating an array elements
+    console.log(`******* extracting all the elements form an array using For loop ******`);
+    let names = ['Bikram','Mahesh','Teja','Vikram']
+    console.log(names);
+     // index based - 3 // number based - 4
+
+    //  Loop through all the elements from an array.
+    for(let k = 0; k < names.length; k++){
+        console.log(`${names[k]}`);
+        
+    }
+
+
+    // Advanced loops
+    /**************************** For-in loop ********************************************/
+    console.log(`******* extracting all the elements form an array using For-in ******`);
+    for(let res in names){
+        console.log(`${names[res]}`);
+        
+    }
+
+    console.log(`******* extracting all the properties form an Object using For-in ******`);
+
+    let person = {
+        name :'Sathya',
+        role : 'Angular developer',
+        experience : '6years'
+    }
+
+    console.log(person);
+    
+    for(let perRes in person){
+        console.log(`${person[perRes]}`);
+        
+    }
+    
+
+    /**************************** For-of loop ********************************************/
+
+    // Example for for-of loop:
+
+    // Iterating over an array
+    let letters = ['a','b','c','d','e']
+
+    for(let letter of letters){
+        console.log(letter);
+        
+    }
+
+    // Iteratig over string
+
+    let greet = 'Good evening..!';
+
+    for(let char of greet){
+        // console.log(char);
+        document.write(char + "<br>")
+        
+    }
+    </script>
+</body>
+</html>
