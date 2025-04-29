@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions-JS</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+        Syntax of function declaration:
+
+        function function_name(){
+            // Code to be executed.
+        }
+        function_name();
+        
+        */ 
+
+       /********************** Rules to declare a function *********************************/
+
+
+        /*
+        1. Function name should not be any uppercase.
+        2. Function name should not be any JS reserved keywords (for,var,let,function,array).
+        3. Function name should not be started with any numbers (1addition()).
+        4. Function name should not be contained any special characters apart from ( _ ) ($ not supported.).
+        5. Funtion name always naming convension ( Meaning full ).
+        6. For recommended way is to declare function use camel case (additionOne) / (addition_one)
+        */ 
+
+
+
+
+        // Function declaration / Function without paraameter
+        function greet(){
+            // Logic / statement / code
+            console.log('Hello Javascript...!');
+            
+        }
+        // To call the function
+        greet()
+
+
+        // Types of functions
+        // 1. Function without parameter
+
+        function add(){
+            let a = 10;
+            let b = 20;
+            let result = a+b;
+            console.log(result);
+            
+        }
+        add();
+
+        // 2. Function with parameter
+
+         /*
+        Syntax of function with parameter:
+
+        function function_name(para1, para2, para3,..... paraN){
+            // Code to be executed.
+        }
+        function_name(argu1, argu2, argu3.... arguN);
+
+
+        Parameter: Input to the function. In the function defination part if you are writing any elements that can be called a parameter
+
+        Arguments: While calling a function if you are assigning any value to the function that is called an argumenent. 
+
+
+        */ 
+
+        // Example for function with  parameter
+        function addition(a,b){
+            let sum = a+b;
+            console.log(sum);
+        }
+        addition(100,200);
+
+
+
+        // 3. Function with default parameter
+        // Example for function with default parameter
+
+        function courseFee(amount,discount=10){
+            let finalPrice = amount-(amount*discount/100);
+            console.log(finalPrice);
+        }
+        courseFee(40000,15);
+
+
+        // 4. Function with return statement / Keyword
+
+        function addOne(a,b){
+           
+            // let resultOne = a+b;
+            // console.log(resultOne);
+            
+            return a+b;
+
+            // this code is not executed because runtime code stops after reading return keyword
+            let message = 'Hello to all';
+            console.log(message);
+
+        }
+        // approach - 1
+        let res = addOne(5,6);
+        console.log(res);
+
+         // approach - 2
+         console.log(addOne(6,5));
+         
+        
+    </script>
+</body>
+</html>
