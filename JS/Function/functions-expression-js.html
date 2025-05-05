@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function-Expression-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // Function declaration
+        // Always function is called by the value but not by the reference.
+        function greet(){
+            console.log('we are learning function declaration');
+            
+        }
+        greet();
+
+
+        // Function expression / Anonymous function / without function name 
+        // Variable function
+        let add = function(a,b){
+            let res = a-b;
+            console.log(res);
+            console.log('we are learning function expression / Anonymous');
+        }
+        add(1,3)
+       
+
+        // Nested function
+        function parent(){
+            let message = 'I am a parent';
+            console.log(message);
+            function children(){
+                let childMessage = 'I am a child';
+                console.log(childMessage);
+            }
+            children()
+        }
+        parent()
+
+
+        // Arrow function - ES6
+
+        /*
+          let v_name = (para1, para2, para3...) =>{
+             // code to be executed.
+            }
+            v_name();
+        */ 
+
+        // approach - 1
+        let sum = (num1, num2) =>{
+            let result = num1 + num2;
+            return result;
+        }
+        console.log(sum(10,20));
+        
+
+        // Clearner way of function / simplified 
+
+        let sumOne = (a,b) => res = a+b;
+        console.log(sumOne(10,20));
+
+
+        // To write an expression inside an object as a value.
+
+        // let course = {
+        //     courseName : 'Full stack',
+        //     courseFee : 40000,
+        //     mode : 'online / offline ',
+        //     moreInfo : function(){
+        //         console.log(` The course name is ${course.courseName} course fee is ${course.courseFee} and mode is ${course.mode}`);
+                
+        //     }
+        // }
+        // course.moreInfo()
+
+
+        // Self invoking funcins( IIF Annotation / IIF Expression)
+        
+        /*
+         syntax:
+
+         (function(){
+         // code 
+         })()
+        
+        */ 
+
+        (() => {
+            alert('We are creating Self invoking function')
+        })()
+        
+    </script>
+</body>
+</html>

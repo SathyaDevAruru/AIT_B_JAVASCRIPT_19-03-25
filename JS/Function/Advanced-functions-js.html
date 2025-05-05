@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced-Function-JS</title>
+</head>
+<body>
+    
+    <button>Click Here</button>
+    <script>
+        /*
+        - First class functions: If we are treating function as a simply value. that is called first class function.
+        - First class function will help us to create Higher Order function.
+        */ 
+
+        // Example fro first class function
+        let num = 10;
+        let firstClassFun = function(){}
+        console.log(firstClassFun);
+
+
+        /********* Higher-Order function  ************/ 
+        /*
+        - HOF : 
+
+            1. Any function that receives another function as an argument.
+            2. A function which returns a new function.
+            3. It can support both 1 def and 2 def
+
+            - The main motto of using HOF to create a callback function
+        
+        */
+
+        // Example for receives another function as an argument:
+        function addOne(a,b){
+            // Code to be executed.
+        }
+       let res = addOne(10,function(){});
+       console.log(res);
+       
+        
+
+        // Example for function which returns a new function:
+        function addTwo(c,d){
+            return function(){};
+        }
+       console.log(addTwo(10,20));
+
+        // Example for function which returns a new function and receives another function as an argument:
+        function addThree(e,f){
+            return function(){};
+        }
+        addThree(10,function(){});
+
+
+        // Example for Higher Order function:
+
+        const btn = document.querySelector('button');
+            btn.addEventListener('click',function(){
+                console.log('We are calling a button using Higher-Order function');
+                
+            })
+
+
+
+        /*
+        Callback function:
+
+            - We use the callbacks to handle Asynchronous behavior in JS. It means line by line.
+            - The function which is passing as an argument is called Callback function.
+            Note:- addEventListener is HOF & Event is Callback function.
+            - Callback function will be called by Higher-Order function.
+        */  
+
+
+        // Example for callback function: Function returns a new function
+        function count(){
+            let counter = 0;
+            return function(){
+                counter + 1;
+            }
+        }
+        console.log(count());  // Call by value
+
+
+        // Example for Callback function:
+
+        // Creation of Callback function
+        function toUpper(char){
+            
+            // Older way
+            // let arr = char.split(' ');
+            // console.log(arr);
+
+            // Ṃodern way:
+            const [first, ...other] = char.split(' ');
+            console.log(first);
+            console.log(other);
+            
+            return [first.toUpperCase(),...other].join(' ')
+
+        }
+        // Creation of Higher-Order function
+        function textTransform(str,fn){
+            console.log(`The output is : ${fn(str)}`);
+        }
+        textTransform('javscript is best', toUpper) //call by reference - JAVASCRIPT is best.
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String-and-String-Methods-JS</title>
+</head>
+<body>
+    
+    <!-- 
+
+    Data-storage-Techiques:
+        1. String.
+        2. Array.
+        3. Object
+        4. Array of an Object.
+        5. Set and Map
+
+    -->
+
+
+    <script>
+
+        /*
+        1.String: It is a group of characters. It can be represented by single '' or double quotes " ".
+        
+            - String can be created two ways.
+
+                 1. string literal way.
+                 2. String Constructor way.
+
+
+            - Syntaxt :  K.w v_n = 'char / number / Special char'; // literal way.
+            - Syntaxt :  K.w v_n = new String('char / number / Special char'); // Constructor way
+
+        */ 
+
+        // String literal way:
+        let course = 'JavaScript';
+        console.log(course);
+        // To know the datatype
+        console.log(typeof course);
+        // To know the lenght of string
+        console.log(course.length);
+        
+        
+
+        // To extract all the characters from a string - Older way
+        console.log(`*****Extracting all the characters from a string ****`);
+
+        console.log(course[0]); // J
+        console.log(course[1]); // a
+        console.log(course[2]); // v
+        console.log(course[3]); // a
+        console.log(course[4]); // s
+        console.log(course[5]); // c
+        console.log(course[6]); // r
+        console.log(course[7]); // i
+        console.log(course[8]); // p
+        console.log(course[9]); // t
+        
+
+         // To extract all the characters from a string - using loop
+         console.log(`*****Extracting all the characters from a string using loop ****`);
+         for(let i = 0; i<course.length; i++){
+            console.log(course[i]);
+         }
+
+        // String Constructor way:
+        let mode = new String('offline / Online');
+        console.log(mode);
+        console.log(typeof mode);
+
+
+        // Example of to use single quotes inside the double quotes:
+        let Message = 'Bikram said "JavaScript" is the best';
+        console.log(Message);
+        
+         // Example of to use double quotes inside the single quotes:
+         let greetMessage = "Vikram said, good evening to all.  It's time to leave"
+         console.log(greetMessage);
+         
+
+        //  Template literal way / Multilne string / Backticks.
+
+        let feedback = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, provident quibusdam. Ea natus aliquam iure eligendi possimus culpa ut voluptate cum asperiores officiis libero dolores est quod debitis, repellendus illo!`;
+        console.log(feedback);
+        
+
+        // String interpolation: 
+
+        let name = 'bikram';
+        let role = 'Back-Developer';
+        let status = 'Active';
+
+        console.log(name+' '+role+ ' '+status); // Older way
+        console.log(name,role,status); // Older way
+        console.log(` My name is ${name} My role is ${role} and Iam always ${status} in my office`); // Newer way 
+        
+        
+        
+    //  Immutable v/s Mutable:
+
+    // String methods:
+
+    let technology = 'UI Development'; // e-3
+    console.log(technology.length);
+    
+
+    // 1. indexOf('str'):
+    console.log(technology.indexOf('e')); // 4
+
+    // 2. lastIndexOf('str'):
+    console.log(technology.lastIndexOf('e')); // 11
+
+    // 3. charAt(index):
+    console.log(technology.charAt(0)); // U
+    console.log(technology.charAt(1)); // I
+
+    // 4. charCodeAt():- Ascii table
+    console.log(technology.charCodeAt(0)); // U - 85
+    console.log(technology.charCodeAt(1)); // I - 73 
+    console.log(technology.charCodeAt(2)); // space - 32 
+
+
+    // 5. substring(from the index , last number of string ) - UI Development
+    console.log(technology.substring(3,14)); // Development
+    
+
+    // 6. toLowerCase():
+    console.log(technology.toLocaleLowerCase());
+
+    // 7. toUpperCase():
+    console.log(technology.toUpperCase());
+
+    // 8. Split () :- To change string into an array
+    console.log(technology.split());
+
+    // 9. replace():
+
+    console.log(technology.replace('UI' , 'Front-End'));
+
+    // 10. includes(boolean)
+    console.log(technology.includes('t')); // true
+    console.log(technology.includes('z')); // not true
+    
+    
+    
+    
+    
+    
+
+
+    
+
+        
+    </script>
+    
+</body>
+</html>
