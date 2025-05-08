@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-JS</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+       - Object Creation
+
+        1. Literal way creating an object
+        2. Construnctor way creating an Object
+        3. Function constructor way of creating an object
+
+        
+        */
+
+        // 1. Literal way creating an object
+
+        let personDetails = {
+            name: 'Vikram',
+            age: 24,
+            course: 'PFS',
+            mode: 'offline'
+
+        }
+
+
+        // To get th values from an obj
+        console.log(personDetails);
+
+        // 2. Construnctor way creating an Object
+
+        let newObj = new Object();
+
+        // To add a new property into an obj 
+        newObj.eName = 'Shekar';
+        newObj.eAge = 25;
+        newObj.eSalary = 80000;
+        console.log(newObj);
+
+
+        //  3. Function constructor way of creating an object
+
+        /*
+        function person(name,age){
+
+            this.name = name;
+            this.age = age;
+
+        }
+        
+        */
+        //     function person(name,age){
+
+        //         this.name = name;
+        //         this.age = age;
+        //         this.greet = function(){
+        //             console.log(`Hello , My name is ${this.name} and my age is ${this.age}`);
+        //         }
+        //     }
+        //  let res = new person('Sathya',25);
+        // res.greet();
+
+        // To add a new property into my object
+        personDetails.email = 'vikram@gmail.com';
+        console.log(personDetails);
+
+        // To modify the existing property from an object
+        personDetails.age = 27;
+        console.log(personDetails);
+
+
+        // To extract an existinng property value from an object
+
+        // 1. Dot notation
+        // Approach -1
+        console.log(personDetails.name);
+
+        // Appraoch -2 
+        let perRes = personDetails.name
+        console.log(perRes);
+        
+        
+        // 2. Bracket notation
+
+        console.log(personDetails['age']);
+        
+
+
+     
+
+    </script>
+</body>
+
+</html>

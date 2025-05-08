@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-methods-JS</title>
+</head>
+<body>
+    
+    <script>
+        // Literal way of creating an object
+        let course = {
+            courseName :'Fulstack',
+            fee : 40000,
+            mode : 'online / offline',
+            location: 'BTM'
+        }
+        // to get the output
+        console.log(course);
+        
+
+        // Object static methods:
+        // 1. Object.keys(): - To get all the key from an Object
+        let keyRes = Object.keys(course);
+        console.log(keyRes);
+
+          // 2. Object.vslues(): - To get all the values from an Object
+          let valueRes = Object.values(course);
+        console.log(valueRes);
+
+        // 3. Object.hasOwnProperty(): To check the property is availbale or not - Boolean treu / fasle
+        console.log(course.hasOwnProperty('location'));
+        console.log(course.hasOwnProperty('discount'));
+
+        // 4. Object.entries():  Which returns an array of a given Object
+        let newObj = Object.entries(course);
+        console.log(newObj);
+
+        // 5. Object.assign(): To add two object
+        let person = {
+            name : 'Vikram',
+            qualification : 'B-Tech'
+        }
+        console.log(course);
+        console.log(person);
+
+        // Adding new object
+        let mergeObj = Object.assign(person,course);
+        console.log(mergeObj);
+
+
+        // - Object.freeze() // Which is not going to add a new property and not going to modify existing property.
+        // - Object.seal() // Which is not going to add a new property but it going to modify existing property.
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

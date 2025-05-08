@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date-Methods-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // Get a day / Date / Month / year - 08/05/2025
+        let today = new Date();
+        console.log(today);
+        console.log(today.getTime());
+        
+
+        // console.log(today.getDay());
+        // console.log(today.getMonth());
+        // console.log(today.getFullYear());
+        // console.log(today.getHours());
+        // console.log(today.getMinutes());
+        // console.log(today.getMilliseconds());
+
+        // Set the date and month
+
+        // today.setDate(4);
+        // today.setMonth(2);
+        // today.setFullYear(2003);
+
+        // console.log(today); // 4 2 2003
+        
+
+         
+        // To set the date formate : - 08/05/2025
+        function getDateFormate(){
+            return (today.getDate()) +'/0'+ (today.getMonth()+1) + '/'+ today.getFullYear();
+        }
+        console.log(getDateFormate());
+        
+
+        
+       
+        
+        
+    </script>
+</body>
+</html>
