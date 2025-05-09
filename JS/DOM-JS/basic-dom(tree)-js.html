@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Object-Model-JS</title>
+</head>
+<body>
+    
+    <p id="para">This is a para by selecting ID in JS.</p>
+    <p class="test">This is a para by selecting classname in JS.</p>
+    <p>This is a para by selecting tagname in JS.</p>
+
+
+    <ul>
+        <li>Shekar</li>
+        <li class="list-1">Teja</li>
+        <li>Vikram</li>
+    </ul>
+    <!-- 
+    DOM :- Document-Object-Model. It is an API's. Used to represnnt the HTML or XML. It defines structure and the way in which they can be accessed and Manipulated by an app program.
+    
+    JS Selectors:
+
+            1. document.getElementById():
+            2. docuement.getElementsByClassName():
+            3. document.getElementsByTagName():
+            4. document.querySelector() // html collections
+            5. document.querySelectorAll() // node list
+             
+    -->
+
+    <script>
+
+        //1. Selecting an element with Id from an HTML
+        let idElem = document.getElementById('para');
+
+        // To highlight an element background
+        idElem.style.background = 'yellow';
+        idElem.style.border = '1px solid red';
+
+
+        //2. Selecting an element wth class from an HTML
+        let classElem = document.getElementsByClassName('test');
+
+        // To apply bold style to the first element
+        classElem[0].style.color = 'red';
+
+        
+
+        // 3. Selecting all the para elements from an HTML
+        let para = document.getElementsByTagName('p');
+
+        // To highlight all the para font italic
+        para[0].style.fontStyle ='italic'
+
+
+        // 5.  document.querySelectorAll()
+        // To select an element that matches the specified CSS selectors. 
+
+        // Selecting all the li elements.
+        let matches = document.querySelectorAll('ul li');
+        console.log(matches);
+        
+
+        // To print the number of selected li elements
+        document.write('Number of Selected Li elements: ' + matches.length +"<hr>")
+
+
+        // To print the content of selected li elements:
+        for(let elem of matches){
+            document.write(elem.innerHTML + '<br>')
+        } 
+
+        // To apply line through style to the first li with class list-1
+        matches = document.querySelectorAll('ul li.list-1');
+        matches[0].style.textDecoration = 'underline'
+    </script>
+</body>
+</html>
