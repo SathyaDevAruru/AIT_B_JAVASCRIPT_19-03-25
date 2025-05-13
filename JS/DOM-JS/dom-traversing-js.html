@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Traversing-JS</title>
+</head>
+<body>
+    
+    <ul id="parent">
+        <li>Bikram</li>
+        <li>Shekar</li>
+        <li>Teja</li>
+    </ul>
+    <script>
+        /*
+        DOM-Traversing: - The pricess of navigating through the HTML DOM tree to access or to manipultean elements their parents. 
+        
+        */
+
+        let ul = document.getElementById('parent');
+
+        // First child element
+        console.log(ul.firstElementChild.textContent); // Bikram
+
+         // Last child element
+        console.log(ul.lastElementChild.textContent); // teja
+
+
+        // From the DOM to traverse back to second li
+        let firstLi = ul.firstElementChild;
+        let secondLi = firstLi.nextElementSibling;
+        console.log(secondLi.textContent); // Shekar
+
+
+        // Traverse back to the fisrt li element
+        let previousLi = secondLi.previousElementSibling;
+        console.log(previousLi.textContent);
+
+
+        // innerHTML - To get / to set HTML inside an element vs textContent:- to get / to set plain text inside an element.
+        
+        
+        
+    </script>
+</body>
+</html>

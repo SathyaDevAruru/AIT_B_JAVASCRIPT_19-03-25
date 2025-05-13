@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML-JS</title>
+    <style>
+        section {
+            border: 1px solid red;
+            display: flex;
+        }
+
+        section figure {
+            border: 1px solid gray;
+            margin: 4px 3px;
+            padding: 5px;
+            border-radius: 15px;
+        }
+
+        section figure img {
+            width: 100%;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <section>
+        <figure>
+            <img src="https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif" alt="course-img">
+            <figcaption>Data Science Course Training</figcaption>
+            <figcaption>Mode : Online / Offline</figcaption>
+            <figcaption>Actual_price:40,000</figcaption>
+            <figcaption>discount_price:2,000</figcaption>
+        </figure>
+        <figure>
+            <img src="https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif" alt="course-img">
+            <figcaption>Data Science Course Training</figcaption>
+            <figcaption>Mode : Online / Offline</figcaption>
+            <figcaption>Actual_price:40,000</figcaption>
+            <figcaption>discount_price:2,000</figcaption>
+        </figure>
+        <figure>
+            <img src="https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif" alt="course-img">
+            <figcaption>Data Science Course Training</figcaption>
+            <figcaption>Mode : Online / Offline</figcaption>
+            <figcaption>Actual_price:40,000</figcaption>
+            <figcaption>discount_price:2,000</figcaption>
+        </figure>
+        <figure>
+            <img src="https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif" alt="course-img">
+            <figcaption>Data Science Course Training</figcaption>
+            <figcaption>Mode : Online / Offline</figcaption>
+            <figcaption>Actual_price:40,000</figcaption>
+            <figcaption>discount_price:2,000</figcaption>
+        </figure>
+
+    </section> -->
+
+    <script>
+        // Sample JSON data:
+
+        let course_details = [
+            {
+                imgUrl: 'https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif',
+                course_name: 'Data Science Course Training',
+                course_mode: 'online / offline',
+                actual_price: 'Actual_price:40,000',
+                discount_price: 'discount_price:2,000'
+            },
+            {
+                imgUrl: 'https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif',
+                course_name: 'Data Science Course Training',
+                course_mode: 'online / offline',
+                actual_price: 'Actual_price:40,000',
+                discount_price: 'discount_price:2,000'
+            },
+            {
+                imgUrl: 'https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif',
+                course_name: 'Data Science Course Training',
+                course_mode: 'online / offline',
+                actual_price: 'Actual_price:40,000',
+                discount_price: 'discount_price:2,000'
+            },
+            {
+                imgUrl: 'https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif',
+                course_name: 'Data Science Course Training',
+                course_mode: 'online / offline',
+                actual_price: 'Actual_price:40,000',
+                discount_price: 'discount_price:2,000'
+            }
+
+        ]
+        console.log(course_details);
+
+        /***************************  Approach-1 :- String ****************************/
+
+        // Loops:- 
+
+        /*  let parentElement = '<section>';
+          for (let i = 0; i < course_details.length; i++) {
+              parentElement += '<figure>';
+              parentElement += '<img src="' + course_details[i].imgUrl + '">';
+              parentElement += '<figcaption>' + course_details[i].course_name + '</figcaption>';
+              parentElement += '<figcaption>' + course_details[i].course_mode + '</figcaption>'
+              parentElement += '<figcaption>' + course_details[i].actual_price + '</figcaption>'
+              parentElement += '<figcaption>' + course_details[i].discount_price + '</figcaption>'
+              parentElement += '</figure>';
+          }
+          parentElement += '</section>';
+          // To print the value of course_details
+          document.write(parentElement); */
+
+
+        /******** Approach - 2:   ES6 Template literal way( Multiline string ) ************/
+
+       /* let parentElement = `<section>`;
+        for (let i = 0; i < course_details.length; i++) {
+            parentElement += `
+                 <figure>
+                    <img src="${course_details[i].imgUrl}">
+                    <figcaption>${course_details[i].course_name}</figcaption>
+                    <figcaption>${course_details[i].course_mode}</figcaption>
+                    <figcaption>${course_details[i].actual_price}</figcaption>
+                    <figcaption>${course_details[i].discount_price}</figcaption>
+                </figure>`
+        }
+        parentElement += `</section>`;
+        document.write(parentElement) */
+
+
+        /*******************  Approach-3 DOM Manipulation ****************************/
+
+        // Create an Element
+        let parentElement = document.createElement('section');
+        let figureElement = document.createElement('figure');
+        let imgElement = document.createElement('img')
+            // To set an attribute to the img tag
+            imgElement.setAttribute('src','https://www.achieversit.com/management/uploads/course_image/artifical-intelliegence-course.png.avif');
+
+        let figcaptionElement1 = document.createElement('figcaption');
+        let figcaptionElement1Text = document.createTextNode('Data Science Course Training');
+            figcaptionElement1.appendChild(figcaptionElement1Text);
+
+
+        let figcaptionElement2 = document.createElement('figcaption');
+        let figcaptionElement2Text = document.createTextNode('Online/Offline');
+            figcaptionElement2.appendChild(figcaptionElement2Text)
+
+
+        let figcaptionElement3 = document.createElement('figcaption');
+         let figcaptionElement3Text = document.createTextNode('Actual_price:40,000');
+            figcaptionElement3.appendChild(figcaptionElement3Text)
+
+
+        let figcaptionElement4 = document.createElement('figcaption');
+         let figcaptionElement4Text = document.createTextNode('discount_price:2,000');
+            figcaptionElement4.appendChild(figcaptionElement4Text)
+
+
+
+
+    // To add all the children into figure element
+    figureElement.appendChild(imgElement)
+    figureElement.appendChild(figcaptionElement1)
+    figureElement.appendChild(figcaptionElement2)
+    figureElement.appendChild(figcaptionElement3)
+    figureElement.appendChild(figcaptionElement4)
+
+    // To add figure element into section 
+    parentElement.appendChild(figureElement);
+    console.log(parentElement);
+    
+
+        
+
+    </script>
+</body>
+
+</html>
