@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting-JS</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        var keyword if you are declaring a variable name on the top the v. declararion which can scan first and made it indefined. But not let and const. 
+        
+        */
+        // Variable declaration hoisting with var keyword
+        console.log(greetOne);
+        var greetOne = 'Good evening to all- Var';
+        console.log(greetOne);
+
+
+        // Variable declaration hoisting with let keyword
+        // console.log(greetTwo);
+        // let greetTwo = 'Good evening to all - Let';
+        // console.log(greetTwo);
+
+
+        // Variable declarationhoisting with const keyword
+        // console.log(greetThree);
+        // const greetThree = 'Good evening to all - Const';
+        // console.log(greetThree);
+
+
+
+        /*************** Function decalration with hoisting********************/ 
+        // Funciton declaration is scanned first and made it available. 
+        welcome();
+        function welcome(){
+            console.log('Welcome to all - function declaration');
+        }
+        welcome();
+
+
+        /*************** Function expression with hoisting ********************/
+
+        /* 
+        - working function expression with var keyword :- Uncaught TypeError: hoist is not a function 
+        - working function expression with let and const keyword :- Uncaught ReferenceError: Cannot access 'hoist' before initialization.
+
+        */
+
+        // hoist()
+       const hoist = function(){
+        console.log('we are doing function expresin with hoisting..');
+        
+        } 
+        hoist()
+
+        //   TDZ - hoisting: variable decaration / function declaration / function expression
+
+
+        // This keyword: It reffers to the current object.
+
+        // Example for before this keyword - older way
+
+       /* let personDetails = {
+            name :'Vikram',
+            role:'Python Developer',
+            salary:50000,
+            moreInfo: function(){
+                console.log(`my name is ${personDetails.name} my role is ${personDetails.role} and my salary is ${personDetails.salary}`); 
+            }
+        }
+        personDetails.moreInfo() */
+
+         // Example for after this keyword - newer way
+          let personDetails = {
+            name :'Vikram',
+            role:'Python Developer',
+            salary:50000,
+            moreInfo: function(){
+                console.log(`my name is ${this.name} my role is ${this.role} and my salary is ${this.salary}`); 
+            }
+        }
+        personDetails.moreInfo()
+
+
+    </script>
+</body>
+</html>

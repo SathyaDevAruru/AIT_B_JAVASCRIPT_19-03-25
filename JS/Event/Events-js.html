@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events-JS</title>
+</head>
+<body onload="alert('Page has been reloaded')">
+    <!-- 
+    event: When the user wants to convert static element into interactive element, then we need an event.
+
+    The main Motto of using an event to trigger an action
+    
+    - Event handler or Event listener
+        - By convention , The names for event handler always being wiht the word 'on',  - onclick js Inline Events 
+        - By using plain JS - addEventListener()
+    -->
+
+
+    <!-- converting Static element into interactive element-->
+    <button onmouseout="alert('You have moved out of the button')">Click here</button> 
+
+
+     <input type="text" onfocus="focusEle(this)">
+
+     <input type="text" onblur="alert('Text input loses focus')">
+
+    <!-- <button type="button" >event with function</button> -->
+
+    <form action="" onsubmit="alert('Form data will be submited to the server')" method="post">
+       <label for="">Name:</label>
+      
+       <input type="text" name="" id="">
+       <input type="submit" value="Submit">
+    </form>
+
+   
+    <script>
+        // function sayHello(){
+        //     alert('Using function we are interacting with a button element')
+        // }
+        // document.getElementById('btn').onclick = sayHello;
+
+        // Types of events:
+        // 1. Mouse Events 
+        // 2. Keyboard events
+        // 3. Form events
+        // 4. page events
+
+
+        function focusEle(ele){
+            ele.style.background = 'red'
+        }
+
+    </script>
+</body>
+</html>

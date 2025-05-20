@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Validation Forms-JS</title>
+</head>
+<body>
+    <form action="" id="myForm">
+        <input type="text" name="uname"  placeholder="Enter your Name"  id="uname">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="message"></p>
+
+
+    <script>
+        // Using Regular expression (RegEx) is the concpet to do Form validation in JS.
+
+        // We are selecting all the ID's from the html 
+        let form = document.getElementById('myForm')
+        let nameInput = document.getElementById('uname')
+        let message = document.getElementById('message')
+
+
+        // Adding an event to the Variables
+        form.addEventListener('submit',function(e){
+            // stop the form from the submitting
+            e.preventDefault()
+
+            let nameValue = nameInput.value;
+
+            // Regular Expression
+            let namgeRegEx = /^[a-zA-Z]{4,11}$/;
+
+            // If user is entering name, We should check the required pattern. Let us write the condition
+            if(namgeRegEx.test(nameValue)){
+                message.style.color = 'green';
+                message.textContent =' You have entered valid name'
+            }else{
+                 message.style.color = 'red';
+                message.textContent =' You have not entered valid name ( your name must be from 4 to 10 char : Note -  number must not be allowed)'
+            }
+        })
+
+    </script>
+</body>
+</html>
