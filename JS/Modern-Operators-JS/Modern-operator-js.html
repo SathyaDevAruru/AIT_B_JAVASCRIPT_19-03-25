@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern-JS</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Destructuring: It allows us to ectract multiple values from an array or Object properties. [] = 
+
+        // Based on the index position it extracts
+        let name = ['Sekhar', 'Vikram', 'Bikram', 'Priya'];
+
+        // older way
+        console.log(name[0]);
+        // console.log(name[1]);
+        // console.log(name[2]);
+        // console.log(name[3]);
+
+        // Modern way - Destructuring
+        let [a, b, c, d] = ['Sekhar', 'Vikram', 'Bikram', 'Priya'];
+        console.log(a, b, c, d);
+
+        // un-order way of printing an array
+        let employee = ['Sekhar', 'Vikram', 'Bikram', 'Priya'];
+        let [e, f, g, h] = employee;
+        console.log(e, f, g, h);
+        console.log(employee);
+
+        // To skip or ignore an element from an array 
+        let [m, , n, o] = ['Sekhar', 'Vikram', 'Bikram', 'Priya'];
+        console.log(m, n, o);
+
+        // Default values:
+        let [x, y, z = 30] = [10, 20];
+        console.log(x, y);
+
+
+        /*
+        Spread operator: Is denoted by (...). That expands an iterable array / object / string into individual elements. 
+        */
+
+        // Example for Spread operator: Array 
+        const arrOne = [1, 2, 3, 4, 5];
+        const arrTwo = [6, 7, ...arrOne, 8, 9, 10];
+        console.log(arrTwo);
+
+        // Example for spread operator - Object
+        let obj = {
+            a: 1,
+            b: 2
+        };
+        let objTwo = {
+
+            c: 3,
+            ...obj
+        }
+        console.log(objTwo);
+
+
+
+
+
+
+        /*
+        
+        Rest parameter: It collects multiple values into one array. It is used in function parameters to accept unlimited number of an arguments.
+        
+
+         Note:
+
+         1. It must be the last parameter in the function delcaration.
+         2. It must be the last parameter in the destructuring.
+
+         ## In function -> It is called rest parameter.
+         ## in destructuring -> it is called rest element.
+
+        */
+
+        // Example for Rest parameter : Function with named para
+        function personDetails(name,age,role,...other) {
+            console.log(name); // Sathya
+            console.log(age); // 30
+            console.log(role); // Angular developer
+            console.log(other);
+        }
+        personDetails('Sathya',30,'Angular Developer','MCA','Sathya@gmail.com','E-city','Trainer')
+
+
+
+        // Example for using destructuring with rest parameter
+        const studentNames = ['Ravi','Kavi','Pavi','Sabhi'];
+        const [eleOne,eleTwo,...restElem] = studentNames;
+        console.log(eleOne);
+        console.log(eleTwo);
+        console.log(restElem);
+        
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
