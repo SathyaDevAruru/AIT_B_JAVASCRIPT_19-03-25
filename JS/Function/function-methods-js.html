@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function-Methods-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // Object creation
+        let productOne = {
+            brand : 'Dell',
+            price : 12000,
+            year : 2021,
+            moreInfo : function(){
+                console.log(`The ${this.brand} price is ${this.price} and it was introduced in the year of ${this.year}`);
+            }
+        }
+        productOne.moreInfo();
+
+
+        let productTwo = {
+            brand : 'Lenovo',
+            price : 10000,
+            year : 2024,
+            moreInfo : function(){
+                console.log(`The ${this.brand} price is ${this.price} and it was introduced in the year of ${this.year}`);
+            }
+        }
+        productTwo.moreInfo();
+
+
+
+        // Sample data of Object
+        let objectOne = {
+            product_name : 'Dell',
+            product_price : 12000
+        }
+
+        let objectTwo = {
+            product_name : 'HP',
+            product_price : 19000
+        }
+
+        let objectThree = {
+            product_name : 'Lenovo',
+            product_price : 10000
+        }
+
+
+        // Creating common methods to all the Objects
+             let productInfo = function(month,year){
+                    console.log(`the product name is ${this.product_name} and It's price is ${this.product_price} and It product month is ${month} this was introduced in the year of ${year}`);
+                }
+
+                // productInfo()
+
+
+        // Function methods : 
+        // 1. call:
+
+                productInfo.call(objectOne,'june',2019);
+                productInfo.call(objectTwo,'Aug',2024);
+                productInfo.call(objectThree);
+
+        // 2. apply:
+
+                // Approach -1
+                productInfo.apply(objectOne,['Jan',1990]);
+                // Approach-2
+                let arrRes = ['Feb',2000];
+                productInfo.apply(objectOne,arrRes)
+
+
+
+        // 3. bind:
+                
+             let bindRes =  productInfo.bind(objectThree,'Sep',2013)
+             bindRes()
+
+
+    </script>
+</body>
+</html>
