@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core-OOPS-JS</title>
+</head>
+
+<body>
+
+
+    <!-- 
+    
+        Core of OOPs:
+
+            - Data Abstraction. (To hide the data)
+            - Encapsulation. ()
+            - Inheritance.
+            - Polymorphism.
+    
+    -->
+
+    <script>
+        /*
+        Encapsulation:
+         the packing of the data and funtion into one component to another component.
+        
+        */
+
+        // Example for Encapsulation:
+        class Student {
+            #marks 
+            constructor(name, marks) {
+                this.name = name; // public
+                this.#marks = marks; // privite
+            }
+
+            // Getter method to read marks
+            getMarks(){
+                return this.#marks;
+            }
+
+            setMarks(newMarks){
+                if(newMarks>= 0 && newMarks<=100){
+                    this.#marks = newMarks;
+                }
+                else{
+                    console.log("Invalid marks !... Please get the maraks from 0 to 100");
+                    
+                }
+            }
+        }
+
+        const studentOne = new Student('Bikram',85);
+        console.log('You have got: ',studentOne.getMarks());  //85
+        
+
+        studentOne.setMarks(95) //
+         console.log('You updated marks are : ',studentOne.getMarks());  //95 
+
+        //  studentOne.setMarks(200);
+        //  console.log(studentOne.getMarks());
+         
+        
+
+        /*
+        Inhertance:
+        one(children) class can inherit properties and mthods from another (parent) class. 
+
+        The main motto of using Inhertance that allos code reuse and helps to build relationshi[s between classes.
+        
+        */ 
+        // Parent
+        class Parent{
+            constructor(name,age){
+                this.name = name
+                this.age = age;
+            }
+            sayHello(){
+                console.log(`Hello, My name is ${this.name}. and My age is ${this.age}`);
+                
+            }
+        }
+
+
+        // Children
+        class Children extends Parent{
+            constructor(name,age,grade){
+                super(name,age);
+                this.grade = grade;
+
+            }
+
+            study(){
+                console.log(`${this.name} is studying in the grade ${this.grade}`);
+                
+            }
+        }
+
+        // To use all 
+        let children = new Parent('Sathya',30,'2nd');
+        children.sayHello() // we are inheriting from a parent
+        let childrenRes = new Children('Sathya',30,'2nd');
+        childrenRes.study() // children own method
+        
+
+
+        // Polymorphism: Same function name behaves deff for differnt object. 
+
+        // Parent 
+        class Payment{
+
+            pay(){
+                console.log('Our payment method selected');
+                
+            }
+        }
+
+        // child - 1
+        class CreadiCard extends Payment{
+            pay(){
+                console.log('Amount has been paid from credit card.');
+                
+            }
+        }
+
+        // Child -2 
+        class BankTransfer extends Payment{
+            pay(){
+                console.log('Amount has been paid from BankTransfer.');
+                
+            }
+        }
+
+         // Child - 3 
+        class UPI extends Payment{
+            pay(){
+                console.log('Amount has been paid from UPI.');
+                
+            }
+        }
+
+        // Creating an Obj
+        let paymentOne = new CreadiCard();
+        let paymentTwo = new BankTransfer();
+        let paymentThree = new UPI();
+
+
+        // Calling the pay()
+        paymentOne.pay() // 
+        paymentTwo.pay() // 
+        paymentThree.pay() // 
+    </script>
+</body>
+
+</html>

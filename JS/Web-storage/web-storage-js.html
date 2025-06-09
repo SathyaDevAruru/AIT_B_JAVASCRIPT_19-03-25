@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage-JS</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Web storage: 
+        Two types of strages
+            - Local storage
+
+            - Session storage
+        
+        */ 
+
+        // To store / To set any data:
+        localStorage.setItem('username','Bikram');
+        localStorage.setItem('username','Bikram');
+        localStorage.setItem('username','Bikram');
+        localStorage.setItem('username','Bikram');
+
+        // To get the value from local storage
+        let user = localStorage.getItem('username');
+        console.log(user);
+
+        localStorage.length
+        // To remove an item
+        // localStorage.removeItem('username');
+
+        // localStorage.clear();
+        
+
+
+        // Session storage
+        sessionStorage.setItem('adharId','2132454546');
+        
+        // get the items
+        let sessionRes = sessionStorage.getItem('adharId');
+        console.log(sessionRes);
+        
+
+        sessionStorage.removeItem('adharId');
+
+
+
+
+        // Closure:
+        // Closure is created when a function is defined inside another function and reference variable from the outer funcnction.
+
+
+        function outer(){
+            let count = 0;
+            function inner(){
+                count ++;
+                console.log(count);
+                
+            }
+            return inner;
+        }
+      let counter =  outer() ;
+      counter() //1
+      counter() // 2
+      counter() // 3
+      counter() // 4
+
+
+        // Eaxmple for Closure
+      function createuser(){
+        let name = 'Sathya';
+        return{
+            getName : function(){
+                return name;
+            },
+            setName: function(sureName){
+                name = sureName;
+            }
+        }
+      }
+      let res = createuser();
+      console.log(res.getName()); // Sathya
+      res.setName('Aruru');
+      console.log(res.getName()); // Aruru
+      
+
+
+    //   Function curring:
+    function greet(message){
+        return function(name){
+            console.log(`${message}, ${name}`);
+        }
+    }
+    let msgRes = greet('Good evening');
+    msgRes('Priya');
+
+
+
+
+
+    // Error handling
+    /*
+    Syntax:
+
+    try{
+        // code can be executed throw an error
+    }
+        catch(error){
+        // code to be handle the error
+    }
+        finally{
+
+        }
+    
+    */
+
+    // Example for error hanlding
+    try{
+        let result = 20/0;
+        console.log('result is:' + result );
+        throw new Error('user error')
+    }catch(err){
+        console.log('something went wrong:' + err.message);
+    }finally{
+        console.log('It always runs, even if we have error.');
+        
+    }
+    </script>
+</body>
+</html>

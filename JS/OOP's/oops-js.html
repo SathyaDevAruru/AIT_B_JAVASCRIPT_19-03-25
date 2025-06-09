@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs-JS</title>
+</head>
+<body>
+    
+    <script>
+        /*
+
+        // In JS OOP : Prototype
+
+        OOPS: It is a programming langauge based on the Object concept. These object can have properties and methods.
+
+        - OOPS based on the concepts:
+
+            - POP
+            - Object - ES5
+            - Class - ES6
+            - Properties 
+            - Methods.
+        
+        */ 
+
+        /* 
+        
+        Class: It is a blueprint of creating an object. 
+
+        Syntax of creating a class in JS ES6
+
+        class Classname{
+
+            constructor(par1,par2){
+                this.propertyOne = para1;
+                this.propertyTwo = para2
+            }
+            
+            Method1(){
+                // Code to be executed
+            }
+
+             Method2(){
+                // Code to be executed
+            }
+
+        
+        }
+
+        */
+
+        // Example for Creating a class in OOPS
+        class Employee{
+            constructor(name,role){
+                this.name = name;
+                this.role = role;
+            }
+            details(){
+                console.log(`My name is ${this.name} and my role is ${this.role}`);
+                
+            }
+            upSkilling(tech){
+                console.log(`${this.name} is upskilling on ${tech} now.`);
+                
+            }
+        }
+
+        // Creating an Objec from the class.
+        let employeeOne = new Employee('Teja','.Net developer');
+        let employeeTwo = new Employee('Teja');
+
+        // To use the methods:
+        employeeOne.details();
+        employeeTwo.upSkilling('Angular')
+
+        let obj = {
+            name : 'JS'
+        }
+        console.log(obj);
+        
+
+
+        // Prototype: Every Object has hidden property. That is called 'Prototype.' 
+
+        // Example for Prototype:
+        let personDetails = {
+           greet : function(){
+            console.log('Good Evening to all...!');
+            
+            }
+        };
+        let personRes = Object.create(personDetails);
+        // personRes.name = 'Vikram';
+
+        // console.log(personRes.name);
+        personRes.greet()
+        
+
+    </script>
+</body>
+</html>

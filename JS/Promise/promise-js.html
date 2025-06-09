@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise-JS</title>
+</head>
+<body>
+    <button>Get the Geo location </button>
+    
+    <!-- 
+     Promise:
+
+        In Promise there are two states
+            
+            1. Pending state: waiting 
+            2. settled state:
+                - fullfilled state.
+                - rejected state.
+
+        - It is a conatainer for an Asynchronous deliver values.
+        -  It acts as an Object. 
+    
+
+        Promise cycle
+
+        - Pending start ----- settled - full - reject 
+    
+    
+    -->
+
+    <script>
+        // To create a promise in JS can be only Constructor way.
+        // const promise = new Promise((resolve,reject) =>{
+        //     if(Math.random() > 0.5){
+        //         resolve('Our item has been delivered...!')
+
+        //     }else{
+        //         reject(`An item hasn't been delivered `)
+        //     }
+            
+        // })
+
+        // // To handle the promise:
+        // promise.then((data) => {
+        //     console.log(data);
+        // },(bik) =>{
+        //     console.log(bik);
+        // })
+
+
+
+
+        // Function declaration
+        function positionChange(){
+            return new Promise((resolve,reject) =>{
+                navigator.geolocation.getCurrentPosition((postData) => resolve(postData), (err) => reject(err))
+            })
+        }
+
+        // Timer function to use in the promise chain
+        function timer(duration){
+            return new Promise((resolve) =>{
+                setTimeout(() =>{
+                    console.log('Timer finined');
+                    
+                },duration)
+            })
+        }
+
+        // Promise chain
+
+        function getGoeHandler(){
+            positionChange().then((data) =>{
+                postData = data;
+                return timer(1000)
+            }).then((msg)=>{
+                console.log(msg,postData);
+            }).catch((err) =>{
+                console.log(err);
+                
+            })
+        }
+
+        timer(0).then(() =>{
+            console.log('Timer has done..');
+            
+        })
+        console.log('Getting the position from location...');
+
+        // Attatching event to the button element
+        const btn = document.querySelector('button');
+        btn.addEventListener('click',getGoeHandler) // call by the reference.
+        
+    </script>
+</body>
+</html>

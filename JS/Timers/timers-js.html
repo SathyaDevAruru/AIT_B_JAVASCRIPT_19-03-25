@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timers-JS</title>
+</head>
+<body>
+    <button onclick="startTimeout()">Start Timeout(2 sec)</button>
+    <button onclick="startInterval()">Satrt Interval(1 sec)</button>
+    <button onclick="stopInterval()">Stop Interval</button>
+    <div id="output"></div>
+    <script>
+        /*
+        
+        - setTimeout(): Which is used to call a function after a certain period of time.
+        
+        Syntax:
+
+        setTimeout(function(){
+            // Code to be executed
+        },time in milliseconds)
+        
+
+        - setInterval is a method which is used to call a function repeatdly at a specified interval of time.
+
+        #### Note ##
+            - setTimeout() is cancelled by clearTimout() method().
+            - setInterval is cancelled by clearInterval method()
+        */ 
+
+
+        // Example for setTimeout and setInterval
+
+        let intervalId;
+
+        // StartTimeout
+        function startTimeout(){
+            setTimeout(() =>{
+                document.getElementById('output').innerHTML += "<p> Timout : Triggered after 2 seconds </p>"
+            },2000)
+        }
+
+        // StarInterval funciton
+        function startInterval(){
+            intervalId = setInterval(() => {
+                 document.getElementById('output').innerHTML += "<p> Timout :  Interval is repeating every 1 sec </p>"
+            }, 1000);
+        }
+
+
+         // StarInterval funciton
+        function stopInterval(){
+            clearInterval(intervalId)
+                 document.getElementById('output').innerHTML += "<p> Timout :  Interval is repeating every 1 sec </p>"
+            
+        }
+
+    </script>
+</body>
+</html>

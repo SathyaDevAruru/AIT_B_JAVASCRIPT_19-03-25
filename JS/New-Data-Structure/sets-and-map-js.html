@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set-and-Map-JS</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        - Sets: A set is a collection of items which are unique. 
+
+        Syntax: - It can be created Constructor way only.
+
+        keyword V_N = new Set([It takes an arguments.])
+        
+        Property: size is the property to check the length of a set.
+        methods:
+
+            - add()
+            - delete()
+            - has()
+            - clear()
+        
+        
+        */
+       
+        // Example for duplicate values 
+        let num = [1,2,3,4,1,1,1,2,2,2,5]
+        console.log(num);
+        console.log(num.length);
+
+        // Example for set method: To print unique values from a variable.
+        let uniqueValues = new Set([1,2,3,4,1,1,1,2,2,2,5])
+
+        // To print the values from set
+        console.log(uniqueValues); // 1,2,3,4,5
+
+        // To know the length of set
+        console.log(uniqueValues.size);
+
+        // to add value from a set
+        uniqueValues.add(6);
+        console.log(uniqueValues);
+        
+
+        // has():
+        console.log(uniqueValues.has(10));
+        
+        // To delete
+        uniqueValues.delete(1);
+        console.log(uniqueValues);
+        
+
+        // clear()
+        uniqueValues.clear();
+        console.log(uniqueValues);
+        
+        
+        /*
+        
+        Maps: It is a collection key and value pairs
+
+        */ 
+
+
+        let newMap = new Map();
+
+        // To add a key to the map
+        newMap.set('name','Vikram');
+        newMap.set('age',29);
+        newMap.set('role','Python');
+        console.log(newMap);
+        
+        
+        
+    </script>
+</body>
+</html>
